@@ -105,7 +105,7 @@
         </div>
         <h3 class="file-name">${name}</h3>
         <div class="file-meta">${size}</div>
-        ${isAudio ? `<iframe class="audio-frame" src="${drivePreviewUrl(file.id)}" title="Écouter ${name}" allow="autoplay"></iframe>` : ""}
+        ${isAudio ? `<audio controls preload="metadata" src="https://drive.google.com/uc?export=download&id=${encodeURIComponent(file.id)}" aria-label="Écouter ${name}"></audio>
         <div class="card-actions">
           ${isAudio
             ? `<a class="action-btn" href="${download}" target="_blank" rel="noopener">Ouvrir</a>`
