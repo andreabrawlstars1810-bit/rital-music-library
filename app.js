@@ -104,8 +104,17 @@
           <span class="file-type">${isAudio ? "AUDIO MP3" : "PARTITION PDF"}</span>
         </div>
         <h3 class="file-name">${name}</h3>
-        <div class="file-meta">${size}</div>
-        <div class="card-actions">
+<div class="file-meta">${size}</div>
+
+${isAudio ? `
+  <div class="audio-player">
+    <audio controls preload="metadata">
+      <source src="https://drive.google.com/uc?export=download&id=${encodeURIComponent(file.id)}" type="audio/mpeg">
+    </audio>
+  </div>
+` : ""}
+
+<div class="card-actions">
           ${isAudio
             ? `<a class="action-btn" href="${download}" target="_blank" rel="noopener">Ouvrir</a>`
             : `<a class="action-btn" href="${preview}" target="_blank" rel="noopener">Consulter</a>`}
