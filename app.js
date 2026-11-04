@@ -33,7 +33,11 @@
     if (n < 1024 * 1024) return `${(n / 1024).toFixed(0)} Ko`;
     return `${(n / (1024 * 1024)).toFixed(1)} Mo`;
   }
-  function driveAudioUrl(id) {
+  function driveDownloadUrl(id) {
+  return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(id)}`;
+}
+
+function driveAudioUrl(id) {
   return `https://www.googleapis.com/drive/v3/files/${encodeURIComponent(id)}?alt=media&key=${encodeURIComponent(cfg.googleApiKey)}`;
 }
   function drivePreviewUrl(id) {
