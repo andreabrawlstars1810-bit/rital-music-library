@@ -6,8 +6,8 @@
      et, si possible, au domaine GitHub Pages de ton site.
 */
 window.RITAL_CONFIG = {
-  googleApiKey: "COLLE_TA_CLE_API_ICI",
-  audioFolderId: "ID_DU_DOSSIER_AUDIOS",
-  pdfFolderId: "ID_DU_DOSSIER_PARTITIONS",
+  googleApiKey: "AIzaSyDq3aUNLmRyv2XF-QhCEQ1EEpHFWGq7fsE",
+  audioFolderId: "1Ltj9Ss4g5ZG0mHzvjq2k896CW2MIflAk",
+  pdfFolderId: "1xAzJj2hVzdw19LNwD5rZN4Y37lVeH8LB",
   refreshIntervalMs: 120000
 };
