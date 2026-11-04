@@ -108,9 +108,10 @@
 
 ${isAudio ? `
   <div class="audio-player">
-    <audio controls preload="metadata">
-      <source src="https://drive.google.com/uc?export=download&id=${encodeURIComponent(file.id)}" type="audio/mpeg">
-    </audio>
+    <audio preload="metadata" src="${download}"></audio>
+    <button class="audio-play" type="button" aria-label="Lire">▶</button>
+    <input class="audio-progress" type="range" min="0" max="100" value="0">
+    <span class="audio-time">0:00 / 0:00</span>
   </div>
 ` : ""}
 
