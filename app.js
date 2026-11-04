@@ -100,9 +100,6 @@ function driveAudioUrl(id) {
       const name = escapeHtml(file.name.replace(/\.[^.]+$/, ""));
       const size = formatSize(file.size);
       const icon = isAudio ? "♫" : "▤";
-      function driveDownloadUrl(id) {
-  return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(id)}`;
-}
       const download = driveDownloadUrl(file.id);
       const preview = isAudio ? "" : drivePreviewUrl(file.id);
       return `<article class="file-card">
