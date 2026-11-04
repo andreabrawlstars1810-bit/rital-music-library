@@ -123,6 +123,58 @@ ${isAudio ? `
         </div>
       </article>`;
     }).join("");
+    grid.querySelectorAll(".audio-player").forEach(player => {
+  const audio = player.querySelector("audio");
+  const button = player.querySelector(".audio-play");
+  const progress = player.querySelector(".audio-progress");
+  const time = player.querySelector(".audio-time");
+
+  function formatTime(seconds) {
+    if (!Number.isFinite(seconds)) return "0:00";
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${String(sec).padStart(2, "0")}`;
+  }
+
+  function updatePlayer() {
+    progress.value = audio.duration
+      ? (audio.currentTime / audio.duration) * 100
+      : 0;
+
+    time.textContent =
+      `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+  }
+
+  button.addEventListener("click", async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+        button.textContent = "Ⅱ";
+        button.setAttribute("aria-label", "Pause");
+      } catch {
+        showToast("Impossible de lire ce fichier audio.");
+      }
+    } else {
+      audio.pause();
+      button.textContent = "▶";
+      button.setAttribute("aria-label", "Lire");
+    }
+  });
+
+  audio.addEventListener("timeupdate", updatePlayer);
+  audio.addEventListener("loadedmetadata", updatePlayer);
+
+  audio.addEventListener("ended", () => {
+    button.textContent = "▶";
+    button.setAttribute("aria-label", "Lire");
+  });
+
+  progress.addEventListener("input", () => {
+    if (audio.duration) {
+      audio.currentTime = (progress.value / 100) * audio.duration;
+    }
+  });
+});
     empty.hidden = filtered.length !== 0;
     if (!filtered.length && allFiles.length) {
       empty.querySelector("h3").textContent = "Aucun résultat";
