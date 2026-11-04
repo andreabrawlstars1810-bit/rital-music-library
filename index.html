@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101b">
+  <title>RITAL — Music Library</title>
+  <meta name="description" content="La bibliothèque musicale privée du groupe RITAL.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Accueil RITAL">
+        <span class="brand-mark">R</span>
+        <span><strong>RITAL</strong><small>MUSIC LIBRARY</small></span>
+      </a>
+      <div class="side-label">BIBLIOTHÈQUE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="all"><span>▦</span> Tous les fichiers</button>
+        <button class="nav-item" data-view="audio"><span>♫</span> Audios</button>
+        <button class="nav-item" data-view="pdf"><span>▤</span> Partitions PDF</button>
+      </nav>
+      <div class="sidebar-note">
+        <span class="pulse"></span>
+        <div><strong>Bibliothèque RITAL</strong><small>Accessible avec le lien</small></div>
+      </div>
+      <div class="sidebar-footer">© RITAL · Music Library</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">R</span><strong>RITAL</strong></div>
+        <div class="topbar-spacer"></div>
+        <span class="public-pill"><span></span> Accès public</span>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">LA BIBLIOTHÈQUE DU GROUPE</div>
+          <h1>Votre musique,<br><span>partout.</span></h1>
+          <p>Retrouvez les partitions et les enregistrements de RITAL au même endroit.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="browseBtn">Explorer la bibliothèque <span>↗</span></button>
+            <span class="hero-caption">Partitions · Audios · Téléchargements</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="music-card card-back">♫</div>
+          <div class="music-card card-front"><div class="sound-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>RITAL</span><small>PLAY YOUR PART</small></div>
+          <div class="floating-note">♪</div>
+        </div>
+      </section>
+
+      <section class="library-section" id="library">
+        <div class="section-heading">
+          <div><div class="eyebrow">VOTRE COLLECTION</div><h2>La bibliothèque</h2></div>
+          <div class="stats"><span id="fileCount">— fichiers</span><span class="stat-dot"></span><span id="updatedAt">Mise à jour automatique</span></div>
+        </div>
+
+        <div class="toolbar">
+          <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Rechercher un morceau, un instrument…" autocomplete="off"></label>
+          <div class="filters" role="group" aria-label="Filtrer les fichiers">
+            <button class="filter active" data-filter="all">Tout</button>
+            <button class="filter" data-filter="audio">Audios</button>
+            <button class="filter" data-filter="pdf">Partitions</button>
+          </div>
+        </div>
+
+        <div id="notice" class="notice" role="status">Chargement de la bibliothèque…</div>
+        <div id="emptyState" class="empty-state" hidden>
+          <div class="empty-icon">♫</div><h3>Aucun fichier pour le moment</h3>
+          <p>Les fichiers ajoutés dans les dossiers RITAL de Google Drive apparaîtront ici après actualisation.</p>
+        </div>
+        <div id="fileGrid" class="file-grid"></div>
+      </section>
+
+      <footer class="footer"><span><b>RITAL</b> · Music Library</span><span>Fait pour jouer ensemble.</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
