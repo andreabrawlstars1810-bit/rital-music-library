@@ -155,8 +155,10 @@ ${isAudio ? `
         await audio.play();
         button.textContent = "Ⅱ";
         button.setAttribute("aria-label", "Pause");
-      } catch {
-        showToast("Impossible de lire ce fichier audio.");
+           } catch (error) {
+        const code = audio.error?.code || "inconnue";
+        showToast(`Erreur audio : ${code}`);
+        console.error("Erreur audio RITAL :", error, audio.error);
       }
     } else {
       audio.pause();
