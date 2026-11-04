@@ -38,7 +38,7 @@
 }
 
 function driveAudioUrl(id) {
-  return `https://www.googleapis.com/drive/v3/files/${encodeURIComponent(id)}?alt=media&key=${encodeURIComponent(cfg.googleApiKey)}`;
+  return `https://drive.google.com/uc?export=download&id=${encodeURIComponent(id)}`;
 }
   function drivePreviewUrl(id) {
     return `https://drive.google.com/file/d/${encodeURIComponent(id)}/preview`;
