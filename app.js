@@ -341,3 +341,27 @@
     setInterval(loadFiles, Number(cfg.refreshIntervalMs));
   }
 })();
+// ===== MENU MOBILE =====
+
+const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+const mobileSidebar = document.getElementById("mobileSidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+mobileMenuToggle.addEventListener("click", () => {
+  const isOpen = mobileSidebar.classList.toggle("open");
+
+  sidebarOverlay.classList.toggle("visible", isOpen);
+  mobileMenuToggle.setAttribute("aria-expanded", isOpen);
+});
+
+sidebarOverlay.addEventListener("click", closeMobileMenu);
+
+document.querySelectorAll(".nav-item").forEach(button => {
+  button.addEventListener("click", closeMobileMenu);
+});
+
+function closeMobileMenu() {
+  mobileSidebar.classList.remove("open");
+  sidebarOverlay.classList.remove("visible");
+  mobileMenuToggle.setAttribute("aria-expanded", "false");
+}
