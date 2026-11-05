@@ -212,3 +212,108 @@ button,input{font:inherit}.app-shell{min-height:100vh;display:grid;grid-template
 .hero {
   border-bottom-color: #303a32;
 }  
+
+/* ===== FINITIONS RITAL - MUSICA ITALIANA ===== */
+
+/* Fond et navigation */
+.sidebar {
+  background: #121812;
+}
+
+.sidebar-note {
+  background: #1b251d;
+  border-color: #304334;
+}
+
+.nav-item {
+  color: #b5beb5;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #203328;
+}
+
+/* Barre de recherche */
+.searchbox,
+.filters {
+  background: #191f19;
+  border-color: #303b31;
+}
+
+.searchbox span {
+  color: #159447;
+}
+
+/* Filtres */
+.filter.active {
+  background: #28543b;
+}
+
+/* Cartes musicales */
+.file-card {
+  background: linear-gradient(145deg, #1c241d, #151b16);
+  border-color: #303a32;
+}
+
+.file-card:hover {
+  border-color: #009246;
+}
+
+/* Boutons secondaires */
+.action-btn {
+  background: #252e26;
+  border-color: #39483b;
+  color: #e5ebe4;
+}
+
+.action-btn:hover {
+  background: #304534;
+  border-color: #009246;
+}
+
+/* Icônes PDF et audio */
+.file-icon.audio {
+  background: #203b2b;
+  color: #65cf91;
+}
+
+.file-icon.pdf {
+  background: #392326;
+  color: #e58b91;
+}
+
+/* Illustration */
+.orb-two {
+  background: radial-gradient(circle, #00924655, transparent 70%);
+}
+
+.card-front small {
+  color: #b4c1b5;
+}
+
+.floating-note {
+  color: #ce2b37;
+}
+
+/* État vide */
+.empty-icon {
+  color: #009246;
+}
+
+/* Lecteur audio */
+.audio-player {
+  background: #1b251e;
+  border-color: #344c39;
+}
+
+/* Notification */
+.toast {
+  background: #202b22;
+  border-color: #426148;
+}
+
+/* Pied de page */
+.footer b {
+  color: #a9d5b4;
+}
