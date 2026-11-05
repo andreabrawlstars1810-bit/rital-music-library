@@ -1,4 +1,18 @@
-:root{color-scheme:dark;--bg:#0d0d16;--panel:#151522;--panel2:#1c1c2b;--line:#29293b;--text:#f5f4fb;--muted:#a09fb4;--purple:#9274ff;--purple2:#6e4df0;--green:#79d9b0}
+:root {
+  color-scheme: dark;
+  --bg: #101210;
+  --panel: #191d19;
+  --panel2: #222822;
+  --line: #303a32;
+  --text: #f5f5f0;
+  --muted: #a5aaa3;
+  --purple: #16864b;
+  --purple2: #08733c;
+  --green: #159447;
+  --italy-green: #009246;
+  --italy-white: #f5f5f0;
+  --italy-red: #ce2b37;
+}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 button,input{font:inherit}.app-shell{min-height:100vh;display:grid;grid-template-columns:250px 1fr}.sidebar{background:#11111c;border-right:1px solid var(--line);padding:30px 20px 22px;display:flex;flex-direction:column;min-height:100vh;position:sticky;top:0;height:100vh}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);margin:0 0 58px 4px}.brand-mark,.mobile-brand .brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#a38cff,#6948e8);display:grid;place-items:center;font-weight:900;font-size:23px;box-shadow:0 8px 25px #7654ee44}.brand strong{display:block;font-size:18px;letter-spacing:2px}.brand small{display:block;color:#88879e;font-size:9px;letter-spacing:2px;margin-top:3px}.side-label,.eyebrow{font-size:10px;letter-spacing:2px;font-weight:800;color:#89879f}.side-label{padding-left:12px;margin-bottom:13px}.nav{display:grid;gap:7px}.nav-item{border:0;background:transparent;color:#aaa9bd;text-align:left;padding:13px 12px;border-radius:10px;cursor:pointer;font-size:13px;transition:.2s}.nav-item span{display:inline-block;width:27px;color:#a28bff;font-size:17px}.nav-item:hover,.nav-item.active{background:#242238;color:white}.sidebar-note{margin-top:auto;background:#1a1a29;border:1px solid #2c2b40;border-radius:12px;padding:14px 12px;display:flex;align-items:center;gap:10px}.sidebar-note strong,.sidebar-note small{display:block}.sidebar-note strong{font-size:11px}.sidebar-note small{font-size:10px;color:var(--muted);margin-top:4px}.pulse,.public-pill span{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px #79d9b077}.sidebar-footer{color:#66657a;font-size:10px;margin:20px 4px 0}
@@ -58,4 +72,143 @@ button,input{font:inherit}.app-shell{min-height:100vh;display:grid;grid-template
 .audio-player audio {
   display: none;
 }
-  
+/* ===== IDENTITE VISUELLE RITAL - ITALIA ===== */
+
+/* Logo */
+.brand-mark,
+.mobile-brand .brand-mark {
+  background: linear-gradient(
+    90deg,
+    #009246 0%,
+    #009246 33.33%,
+    #f5f5f0 33.33%,
+    #f5f5f0 66.66%,
+    #ce2b37 66.66%,
+    #ce2b37 100%
+  );
+  color: #151515;
+  box-shadow: 0 8px 25px #00924633;
+}
+
+/* Petit accent italien */
+.brand strong {
+  letter-spacing: 2.5px;
+}
+
+/* Titres */
+.hero h1 span {
+  color: var(--italy-green);
+}
+
+/* Boutons principaux */
+.primary-btn {
+  background: var(--italy-green);
+  box-shadow: 0 8px 25px #00924635;
+}
+
+.primary-btn:hover {
+  background: #12a65c;
+}
+
+/* Navigation */
+.nav-item span {
+  color: var(--italy-green);
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #203328;
+}
+
+/* Illustration musicale */
+.orb-one {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #16864b,
+    #153b29 65%,
+    transparent 70%
+  );
+}
+
+.card-back {
+  background: linear-gradient(145deg, #28543b, #171d18);
+  color: #f5f5f0;
+}
+
+.card-front {
+  background: linear-gradient(145deg, #292f29, #171b17);
+}
+
+.sound-bars i {
+  background: var(--italy-green);
+}
+
+.floating-note {
+  color: var(--italy-red);
+}
+
+/* Filtres */
+.filter.active {
+  background: #28543b;
+}
+
+/* Cartes */
+.file-card:hover {
+  border-color: var(--italy-green);
+}
+
+/* Icônes audio */
+.file-icon.audio {
+  background: #203b2b;
+  color: #65cf91;
+}
+
+/* Boutons des fichiers */
+.action-btn.download {
+  background: var(--italy-green);
+  border-color: var(--italy-green);
+}
+
+.action-btn.download:hover {
+  background: #12a65c;
+}
+
+/* Lecteur audio */
+.audio-player {
+  background: #1b251e;
+  border-color: #344c39;
+}
+
+.audio-play {
+  background: var(--italy-green);
+}
+
+.audio-play:hover {
+  background: #12a65c;
+}
+
+.audio-progress {
+  accent-color: var(--italy-green);
+}
+
+/* Indicateur public */
+.public-pill {
+  background: #1b2b20;
+  color: #a9e8bf;
+  border-color: #315b3c;
+}
+
+.pulse,
+.public-pill span {
+  background: var(--italy-green);
+  box-shadow: 0 0 10px #00924677;
+}
+
+/* Barre de séparation tricolore */
+.topbar {
+  border-bottom-color: #303a32;
+}
+
+.hero {
+  border-bottom-color: #303a32;
+}  
