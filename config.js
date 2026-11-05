@@ -1,10 +1,12 @@
 /*
   CONFIGURATION RITAL
 */
-window.RITAL_CONFIG = {
+ window.RITAL_CONFIG = {
   googleApiKey: "AIzaSyDq3aUNLmRyv2XF-QhCEQ1EEpHFWGq7fsE",
 
   audioFolderId: "1Ltj9Ss4g5ZG0mHzvjq2k896CW2MIflAk",
+
+  pdfFolderId: "1xAzJj2hVzdw19LNwD5rZN4Y37lVeH8LB",
 
   instrumentFolders: {
     basse: "1A2lWTekaeaFIt2aSNqz1SDUNYQRNigW1",
