@@ -317,3 +317,86 @@ button,input{font:inherit}.app-shell{min-height:100vh;display:grid;grid-template
 .footer b {
   color: #a9d5b4;
 }
+/* ===== EQUILIBRE DES COULEURS RITAL ===== */
+
+/* Navigation */
+.nav-item.active {
+  background: linear-gradient(90deg, #203d2b, #382326);
+  border-left: 3px solid #009246;
+}
+
+/* Titres et petits détails */
+.eyebrow,
+.side-label {
+  color: #ce2b37;
+}
+
+/* Recherche */
+.searchbox span {
+  color: #f5f5f0;
+}
+
+/* Filtres */
+.filter.active {
+  background: #28543b;
+  border-color: #009246;
+}
+
+/* Cartes musicales */
+.file-card:hover {
+  border-color: #ce2b37;
+  box-shadow: 0 8px 25px #ce2b3720;
+}
+
+/* Boutons */
+.action-btn {
+  background: #252b27;
+  border-color: #465047;
+}
+
+.action-btn:hover {
+  background: #392326;
+  border-color: #ce2b37;
+}
+
+/* Icônes */
+.file-icon.audio {
+  background: #203b2b;
+  color: #65cf91;
+}
+
+.file-icon.pdf {
+  background: #392326;
+  color: #e58b91;
+}
+
+/* Illustration */
+.orb-two {
+  background: radial-gradient(circle, #00924655, transparent 70%);
+}
+
+.floating-note {
+  color: #ce2b37;
+}
+
+/* Lecteur audio */
+.audio-player {
+  background: linear-gradient(110deg, #1b251e, #302023);
+  border-color: #465047;
+}
+
+/* État vide */
+.empty-icon {
+  color: #ce2b37;
+}
+
+/* Notifications */
+.toast {
+  background: #292421;
+  border-color: #ce2b37;
+}
+
+/* Textes secondaires */
+.footer b {
+  color: #f5f5f0;
+}
