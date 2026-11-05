@@ -1,4 +1,3 @@
-
 (() => {
   const cfg = window.RITAL_CONFIG || {};
 
