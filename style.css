@@ -400,3 +400,93 @@ button,input{font:inherit}.app-shell{min-height:100vh;display:grid;grid-template
 .footer b {
   color: #f5f5f0;
 }
+/* ===== PALETTE FINALE RITAL ===== */
+
+/* Bouton principal : ROUGE */
+.primary-btn {
+  background: #ce2b37;
+  box-shadow: 0 8px 25px #ce2b3735;
+}
+
+.primary-btn:hover {
+  background: #e13b47;
+}
+
+/* Titres : BLANC */
+.hero h1 span {
+  color: #f5f5f0;
+}
+
+/* Navigation : VERT */
+.nav-item span {
+  color: #009246;
+}
+
+/* Filtres actifs : ROUGE */
+.filter.active {
+  background: #ce2b37;
+  color: white;
+}
+
+/* Téléchargement : VERT */
+.action-btn.download {
+  background: #009246;
+  border-color: #009246;
+}
+
+.action-btn.download:hover {
+  background: #08733c;
+}
+
+/* Survol des cartes : ROUGE */
+.file-card:hover {
+  border-color: #ce2b37;
+}
+
+/* Lecteur audio : VERT */
+.audio-play {
+  background: #009246;
+}
+
+.audio-play:hover {
+  background: #12a65c;
+}
+
+.audio-progress {
+  accent-color: #009246;
+}
+
+/* Illustration : mélange rouge et vert */
+.orb-one {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #ce2b37,
+    #392326 65%,
+    transparent 70%
+  );
+}
+
+.orb-two {
+  background: radial-gradient(circle, #00924655, transparent 70%);
+}
+
+/* Icônes */
+.file-icon.audio {
+  background: #203b2b;
+  color: #65cf91;
+}
+
+.file-icon.pdf {
+  background: #392326;
+  color: #e58b91;
+}
+
+/* État vide : ROUGE */
+.empty-icon {
+  color: #ce2b37;
+}
+
+/* Barre de recherche : BLANC */
+.searchbox span {
+  color: #f5f5f0;
+}
